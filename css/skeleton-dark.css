@@ -76,8 +76,22 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 
 html {
   font-size: 100%; }
-body {
-  background-color: #000000;
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+body{ 
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -106,9 +120,9 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #0085FF; }
+  color: #000; }
 a:hover {
-  color: #0085FF; }
+  color: #000; }
 
 
 /* Code
