@@ -1,4 +1,4 @@
-export const Proyecto = () => import('../../components/Proyecto.vue' /* webpackChunkName: "components/proyecto" */).then(c => wrapFunctional(c.default || c))
+export { default as Proyecto } from '../../components/Proyecto.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
