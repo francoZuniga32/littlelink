@@ -8,6 +8,7 @@
       tag="article"
       style="max-width: 20rem;"
       class="mb-2"
+      bg-variant="dark"
     >
       <b-card-text>
         {{ presentation }}
@@ -15,7 +16,7 @@
 
       <b-button @click="ver">Ver mas</b-button>
     </b-card>
-    <b-modal v-bind:id="modalid" v-bind:title="title">
+    <b-modal body-bg-variant="dark" header-bg-variant="dark" footer-bg-variant="dark" v-bind:id="modalid" v-bind:title="title">
       <p class="my-4">Hello from modal!</p>
     </b-modal>
   </div>
