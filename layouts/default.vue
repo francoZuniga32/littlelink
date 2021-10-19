@@ -33,21 +33,15 @@
     </b-navbar>
     <Nuxt />
     <br />
-    <footer class="footer">
-      <b-row>
+    <footer class="footer d-flex justify-content-center ">
+      <b-row class="text-center">
         <a
             href="https://cafecito.app/francozuniga"
             rel="noopener"
             target="_blank"
-            ><img
-              srcset="
-                https://cdn.cafecito.app/imgs/buttons/button_3.png       1x,
-                https://cdn.cafecito.app/imgs/buttons/button_3_2x.png    2x,
-                https://cdn.cafecito.app/imgs/buttons/button_3_3.75x.png 3.75x
-              "
-              src="https://cdn.cafecito.app/imgs/buttons/button_3.png"
-              alt="Invitame un café en cafecito.app"
-          /></a>
+            >
+          invitame un cafesito    
+        </a>
       </b-row>
       <b-row>
         <p>
@@ -65,18 +59,22 @@ Iconos diseñados por
   </b-container-fluid>
 </template>
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body {
   margin: 0;
-  background-color: #4F3B78;
-  color: white;
+  background-color: #F7F4EA;
+  color: black;
   font-family: "Roboto Mono", monospace;
+}
+
+h1, h2, h3, h4, h5{
+  font-family: 'Montserrat', sans-serif;
 }
 
 .navbar {
   width: 100%;
-  background-color: #363B4E;
+  background-color: #6A7FF5;
   border-radius: 0px 0px 10px 10px;
 }
 
@@ -87,11 +85,16 @@ body {
   width: 100%;
 }
 
+a, a:hover{
+  color: white;
+}
+
 .footer{
   width: 100%;
   padding: 10px;
-  background-color: #363B4E;
+  background-color: #6A7FF5;
   flex-direction: column;
+  border-radius: 10px 10px 0px 0px;
 }
 .footer > div{
   width: 100%;

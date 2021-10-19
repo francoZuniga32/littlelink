@@ -13,10 +13,12 @@
         {{ presentation }}
       </b-card-text>
 
-      <b-button style="background: #927FBF" @click="ver">Ver mas</b-button>
+      <b-button block style="background: #7874F2" @click="ver">Ver mas</b-button>
     </b-card>
     <b-modal ok-variant="dark" cancel-variant="danger" size="xl" centered v-bind:id="modalid" v-bind:title="title">
-      <p class="my-4">Hello from modal!</p>
+      <div v-html="text">
+
+      </div>
     </b-modal>
   </div>
 </template>
@@ -47,11 +49,19 @@ export default {
 </script>
 <style>
 .card{
-  background-color: #4F3B78;
+  background-color: #F7F4EA;
+  border-radius: 10px;
+  border: 1px solid #565656;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 }
+
+.card:hover{
+box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+}
 .modal-content{
-  background-color: #4F3B78;
+  background-color: #F7F4EA;
   border-color: #4F3B78;
 }
 </style>

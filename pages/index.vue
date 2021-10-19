@@ -2,70 +2,101 @@
   <b-container>
     <b-row
       class="d-flex justify-content-center align-items-center"
-      style="margin-top: 1%"
+      style="margin: 10% 0%"
     >
-      <b-col class="d-flex justify-content-center">
-        <b-avatar src="perfil.jpg" size="14em"></b-avatar>
+      <b-col sm>
+        <h1 class="text-left">
+          <b>Franco Zuñiga, Desarrollador Web</b>
+        </h1>
+      </b-col>
+      <b-col sm>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque
+          veritatis atque pariatur veniam eius ratione iusto recusandae
+          aspernatur reiciendis eos. Dolor quibusdam eos, optio earum
+          reprehenderit in quae quas adipisci.
+        </p>
       </b-col>
     </b-row>
+    <hr />
     <b-row>
-      <h1 class="text-center">
-        <b>Franco Zuñiga, Desarrollador Web</b>
-      </h1>
+      <b-col>
+        <h2>Tecnologuias:</h2>
+        <ol>
+          <li v-for="(tec, i) in tecnologuias" :key="i">{{ tec }}</li>
+        </ol>
+      </b-col>
+      <b-col>
+        <h2>Road-map:</h2>
+        <ul class="timeline">
+          <li>
+            <h5>ORM</h5>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              scelerisque diam non nisi semper, et elementum lorem ornare.
+              Maecenas placerat facilisis mollis. Duis sagittis ligula in
+              sodales vehicula....
+            </p>
+          </li>
+          <li>
+            <a href="#">21 000 Job Seekers</a>
+            <a href="#" class="float-right">4 March, 2014</a>
+            <p>
+              Curabitur purus sem, malesuada eu luctus eget, suscipit sed
+              turpis. Nam pellentesque felis vitae justo accumsan, sed semper
+              nisi sollicitudin...
+            </p>
+          </li>
+          <li>
+            <a href="#">Awesome Employers</a>
+            <a href="#" class="float-right">1 April, 2014</a>
+            <p>
+              Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla
+              odio, tincidunt vitae nunc vitae, mollis pharetra velit. Sed nec
+              tempor nibh...
+            </p>
+          </li>
+        </ul>
+      </b-col>
+      <b-col>
+        <h2>Logros:</h2>
+      </b-col>
     </b-row>
+    <hr />
     <b-row>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque
-        veritatis atque pariatur veniam eius ratione iusto recusandae aspernatur
-        reiciendis eos. Dolor quibusdam eos, optio earum reprehenderit in quae
-        quas adipisci.
-      </p>
+      <b-col>
+        <h2>Proyectos</h2>
+        <b-row class="row row-cols-1 row-cols-md-4">
+          <proyecto
+            v-for="(data, i) in proyectos"
+            :key="i"
+            :id="i"
+            :title="data.title"
+            :img="data.img"
+            :link="data.link"
+            :presentation="data.presentation"
+            :text="data.text"
+          ></proyecto>
+        </b-row>
+      </b-col>
     </b-row>
+    <hr />
     <b-row>
-      <b-tabs content-class="mt-3" fill>
-        <b-tab active>
-          <template variant="dark" #title>
-            Proyectos
-          </template>
-          <b-row class="row row-cols-1 row-cols-md-4">
-            <proyecto
-              v-for="(data, i) in proyectos"
-              :key="i"
-              :id="i"
-              :title="data.title"
-              :img="data.img"
-              :link="data.link"
-              :presentation="data.presentation"
-              :text="data.text"
-            ></proyecto>
-          </b-row>
-        </b-tab>
-        <b-tab title="Youtube">
-          <b-row class="row row-cols-1 row-cols-md-4">
-            <videoCard
-              v-for="(data, i) in videos"
-              :key="i"
-              :title="data.title"
-              :img="data.img"
-              :url="data.url"
-            ></videoCard>
-          </b-row>
-        </b-tab>
-        <b-tab title="Demos">
-          <b-row class="">
-            <proyecto
-              v-for="(data, i) in demos"
-              :key="i"
-              :id="`demo-${i}`"
-              :title="data.title"
-              :img="data.img"
-              :link="data.link"
-              :presentation="data.presentation"
-              :text="data.text"
-            ></proyecto>
-          </b-row>
-        </b-tab>
-      </b-tabs>
+      <b-col>
+        <h2>Demos</h2>
+        <b-row class="row row-cols-1 row-cols-md-4">
+          <proyecto
+            v-for="(data, i) in demos"
+            :key="i"
+            :id="`demo-${i}`"
+            :title="data.title"
+            :img="data.img"
+            :link="data.link"
+            :presentation="data.presentation"
+            :text="data.text"
+          ></proyecto>
+        </b-row>
+      </b-col>
     </b-row>
   </b-container>
 </template>
@@ -80,6 +111,16 @@ export default {
   },
   data() {
     return {
+      tecnologuias: [
+        "HTML",
+        "CSS-Basico",
+        "JS",
+        "PHP",
+        "MySQL",
+        "Node JS",
+        "Sequelise ORM",
+        "Linux / Bash",
+      ],
       proyectos: [
         {
           title: "Cooking Beats",
@@ -99,7 +140,7 @@ export default {
             "https://github.com/francoZuniga32/francozuniga32.github.io/tree/master/docs",
         },
         {
-          title: "Proyecto 3",
+          title: "CMS nodejs & nuxt js",
           img: "perfil.jpg",
           presentation: "lorem ipsu,",
           text: "sdfasdfasdkfjasldjkfkajs;df",
@@ -107,27 +148,12 @@ export default {
             "https://github.com/francoZuniga32/francozuniga32.github.io/tree/master/docs",
         },
         {
-          title: "Proyecto 1",
+          title: "CEFAI app",
           img: "perfil.jpg",
           presentation: "lorem ipsu,",
           text: "sdfasdfasdkfjasldjkfkajs;df",
           link:
             "https://github.com/francoZuniga32/francozuniga32.github.io/tree/master/docs",
-        },
-        {
-          title: "Proyecto 1",
-          img: "perfil.jpg",
-          presentation: "lorem ipsu,",
-          text: "sdfasdfasdkfjasldjkfkajs;df",
-          link:
-            "https://github.com/francoZuniga32/francozuniga32.github.io/tree/master/docs",
-        },
-      ],
-      videos: [
-        {
-          title: "ORM en 20 minutos",
-          img: "miniaturas/ORM.png",
-          url: "https://www.youtube.com/watch?v=sb7AD3x_UPk",
         },
       ],
       demos: [
@@ -138,7 +164,15 @@ export default {
             "Ecomerce de Instrumentales. Proyecto finalizata de NAVES Federal.",
           text: "sdfasdfasdkfjasldjkfkajs;df",
           link: "http://cookingbeats.ar/",
-        }
+        },
+        {
+          title: "Producto Flow",
+          img: "perfil.jpg",
+          presentation:
+            "Ecomerce de Instrumentales. Proyecto finalizata de NAVES Federal.",
+          text: ``,
+          link: "http://cookingbeats.ar/",
+        },
       ],
     };
   },
@@ -149,19 +183,61 @@ export default {
   color: white;
 }
 
-.nav-tabs .nav-link{
-  
+.nav-tabs .nav-link {
 }
 
 .nav-tabs .nav-link.active {
   color: white;
-  background-color: #4F3B78;
-  border-color: #363B4E;
+  background-color: #4f3b78;
+  border-color: #363b4e;
 }
 
 .tab-content {
-  background-color: #363B4E;
+  background-color: #363b4e;
   border-radius: 10px;
   padding: 1%;
+}
+
+ol {
+  list-style-type: none;
+  counter-reset: li;
+}
+
+li:before {
+  counter-increment: li;
+  content: counter(li, decimal-leading-zero);
+  color: #6a7ff5;
+  margin-right: 0.25em;
+}
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: black;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid black;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
 }
 </style>
