@@ -11,10 +11,11 @@
       </b-col>
       <b-col sm>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque
-          veritatis atque pariatur veniam eius ratione iusto recusandae
-          aspernatur reiciendis eos. Dolor quibusdam eos, optio earum
-          reprehenderit in quae quas adipisci.
+          Soy franco zuñiga soy estudiante de Ciencias de la Computación y Administración de Sistemas.
+           Programo web desde hace 4 años, ademas cuento con experiencia programando software para  empresas.
+        </p>
+        <p>
+          Creo que tengo lo suficiente como para poder ayudarte con tus proyectos espero que puedas contar conmigo.
         </p>
       </b-col>
     </b-row>
@@ -26,34 +27,15 @@
           <li v-for="(tec, i) in tecnologuias" :key="i">{{ tec }}</li>
         </ol>
       </b-col>
-      <b-col>
-        <h2>Road-map:</h2>
+      <b-col style="height: 300px; overflow-x: scroll;">
+        <h2>Experiencia:</h2>
         <ul class="timeline">
-          <li>
-            <h5>ORM</h5>
+          <li v-for="(trabajo, i) in experiencia" :key="i">
+            <h5>{{ trabajo.titulo}}</h5>
+            <h6>{{ trabajo.area }}. {{ trabajo.puesto }}</h6>
+            <hr>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-              scelerisque diam non nisi semper, et elementum lorem ornare.
-              Maecenas placerat facilisis mollis. Duis sagittis ligula in
-              sodales vehicula....
-            </p>
-          </li>
-          <li>
-            <a href="#">21 000 Job Seekers</a>
-            <a href="#" class="float-right">4 March, 2014</a>
-            <p>
-              Curabitur purus sem, malesuada eu luctus eget, suscipit sed
-              turpis. Nam pellentesque felis vitae justo accumsan, sed semper
-              nisi sollicitudin...
-            </p>
-          </li>
-          <li>
-            <a href="#">Awesome Employers</a>
-            <a href="#" class="float-right">1 April, 2014</a>
-            <p>
-              Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla
-              odio, tincidunt vitae nunc vitae, mollis pharetra velit. Sed nec
-              tempor nibh...
+              {{ trabajo.descripcion }}
             </p>
           </li>
         </ul>
@@ -121,37 +103,62 @@ export default {
         "Sequelise ORM",
         "Linux / Bash",
       ],
+      experiencia:[
+        {
+          titulo: "Policia de la Provincia del Neuquen",
+          puesto: "Pasante",
+          area: "Dpto de informática, Area de programacion",
+          descripcion: "Realizar tareas de capacitación en el funcionamiento del dpto de informática de dicho ente, centrándome en el area de programacion, aprendiendo los pasos y formas en la que se desarrolla un software."
+        },
+        {
+          titulo: "Pasantías en la Facultad de Informática",
+          puesto: "Pasante",
+          area: "Universidad del Comahue, Facultad de Informática",
+          descripcion:"Realice pasantías realizando labores educativas. Participe como tallerista del programa de Vocaciones TIC, participe como ayudante en Vocaciones TIC itinerante, realizando actividades en Loncopué y Chos Malal. Además de participar de varias actividades de la facultad."
+        },
+        {
+          titulo: "Programador en Tree Soft",
+          puesto: "Desarrollador web",
+          area: "Programacion",
+          descripcion:"migre el backend de una aplicación construida en PHP a nodejs con Express y Sequelize, lo que resultó en una api rest. Además de desarrollar una aplicación en Vuejs Cli para consumir dicha api."
+        },
+        {
+          titulo: "Programador principal de Cooking Beats",
+          puesto: "Programador Principal",
+          area: "Programacion",
+          descripcion:"Cooking beats es un marketplace comunidad para productores de audio y beatmakers. Soy cofundador además de programador principal. Finalistas de nave federal 2021."
+        },
+      ],
       proyectos: [
         {
           title: "Cooking Beats",
-          img: "perfil.jpg",
+          img: "miniaturas/cookingbeats.png",
           presentation:
-            "Ecomerce de Instrumentales. Proyecto finalizata de NAVES Federal.",
-          text: "sdfasdfasdkfjasldjkfkajs;df",
+            "Marketplace comunidad de beatmakers y productores de audio. Finalista de naves federal (banco macro)",
+          text: `
+            <p>Creamos Cooking Beats con el objetivo de ayudar a la comunidad de beatmaker y productor a poder comercializar su música por medio de una plataforma que asegure que ambas partes sean beneficiadas. El sistema está construido en tecnologías modernas por lo que siempre estamos avanzando a nuevos entornos.</p>
+          `,
           link: "http://cookingbeats.ar/",
         },
         {
           title: "Debian FAI",
-          img: "perfil.jpg",
+          img: "miniaturas/debianfai.png",
           presentation:
-            "Pagina de presentacion y descarga de la distro linux Debian FAI.",
-          text: "sdfasdfasdkfjasldjkfkajs;df",
-          link:
-            "https://github.com/francoZuniga32/francozuniga32.github.io/tree/master/docs",
-        },
-        {
-          title: "CMS nodejs & nuxt js",
-          img: "perfil.jpg",
-          presentation: "lorem ipsu,",
-          text: "sdfasdfasdkfjasldjkfkajs;df",
+            "página web de la distribución de Debian de la facultad de informática",
+          text: `
+            <p>Está construida en html, js y css puro además de que uso bootstrap para el grid y lo demás. Contiene lo necesario para saber instalarlo además de los archivos de la distro.</p>
+          `,
           link:
             "https://github.com/francoZuniga32/francozuniga32.github.io/tree/master/docs",
         },
         {
           title: "CEFAI app",
-          img: "perfil.jpg",
-          presentation: "lorem ipsu,",
-          text: "sdfasdfasdkfjasldjkfkajs;df",
+          img: "miniaturas/img.png",
+          presentation: "Aplicación de horarios y consulta de correlatividades",
+          text: `
+            <p>Esta aplicación de momento está fuera de línea ya que estamos en proceso de migrar a un ORM. El sitio ofrece un sistema de horarios para mostrar qué materias se están dictando además del aula en donde se cursa.</p>
+            <p>Otra de las funcionalidades es la de consultar las correlativas para poder saber el régimen de correlatividades sin tener que leer una tabla. Una de las cosas que queremos agregar es la capacidad de contar con cursos de programación para los estudiantes de la carrera. </p>
+          `,
           link:
             "https://github.com/francoZuniga32/francozuniga32.github.io/tree/master/docs",
         },
@@ -159,18 +166,22 @@ export default {
       demos: [
         {
           title: "Ecomerce",
-          img: "perfil.jpg",
+          img: "miniaturas/ecommerce.png",
           presentation:
-            "Ecomerce de Instrumentales. Proyecto finalizata de NAVES Federal.",
-          text: "sdfasdfasdkfjasldjkfkajs;df",
+            "Demostración de cómo funciona un ecommerce de forma sencilla",
+          text: `
+            <p>Podrá realizar las acciones básicas y necesarias para poder realizar una compra. Podrá seleccionar un producto, la cantidad y cargarlas a un carrito de compras. Tengo que trabajar en el sistema de paginación y además en los filtros de búsqueda.</p>
+          `,
           link: "http://cookingbeats.ar/",
         },
         {
           title: "Producto Flow",
-          img: "perfil.jpg",
+          img: "miniaturas/img.png",
           presentation:
-            "Ecomerce de Instrumentales. Proyecto finalizata de NAVES Federal.",
-          text: ``,
+            "Aplicación de control de produccion.",
+          text: `
+            <p>Son innumerables las empresas que requieren un sistema de seguimiento de su produccion, he aquí una demo de como funcionaria una en la vida real. Podrá ingresar un pedido, luego de esto tendrá que completar los formularios para los procesos de dicho producto y podrá ver por qué etapa están dichos productos. Luego de finalizar podrá realizar la entrega de dicho pedido. Además de esto podrá ver algunas métricas como por ejemplo en qué etapa está se encuentra un pedido.</p>
+          `,
           link: "http://cookingbeats.ar/",
         },
       ],

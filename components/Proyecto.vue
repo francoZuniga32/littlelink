@@ -8,12 +8,11 @@
       tag="article"
       style="max-width: 40rem;"
       class="mb-2"
+      @click="ver"
     >
       <b-card-text style="height: 100px; overflow: hidden; text-overflow: ellipsis;">
         {{ presentation }}
       </b-card-text>
-
-      <b-button block style="background: #7874F2" @click="ver">Ver mas</b-button>
     </b-card>
     <b-modal ok-variant="dark" cancel-variant="danger" size="xl" centered v-bind:id="modalid" v-bind:title="title">
       <div v-html="text">

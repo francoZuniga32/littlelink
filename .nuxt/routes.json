@@ -3,7 +3,6 @@
     "name": "index",
     "path": "/",
     "component": "/home/franco/proyects/francozuniga32.github.io/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_9bc0538c"
+    "chunkName": "pages/index"
   }
 ]
