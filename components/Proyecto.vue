@@ -18,6 +18,8 @@
       <div v-html="text">
 
       </div>
+      <hr>
+      <a class="btn btn-ligth" v-bind:href="link">Ver Proyecto</a>
     </b-modal>
   </div>
 </template>

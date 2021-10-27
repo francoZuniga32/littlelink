@@ -138,7 +138,7 @@ export default {
           text: `
             <p>Creamos Cooking Beats con el objetivo de ayudar a la comunidad de beatmaker y productor a poder comercializar su música por medio de una plataforma que asegure que ambas partes sean beneficiadas. El sistema está construido en tecnologías modernas por lo que siempre estamos avanzando a nuevos entornos.</p>
           `,
-          link: "http://cookingbeats.ar/",
+          link: "https://cookingbeats.github.io/",
         },
         {
           title: "Debian FAI",
@@ -149,7 +149,7 @@ export default {
             <p>Está construida en html, js y css puro además de que uso bootstrap para el grid y lo demás. Contiene lo necesario para saber instalarlo además de los archivos de la distro.</p>
           `,
           link:
-            "https://github.com/francoZuniga32/francozuniga32.github.io/tree/master/docs",
+            "http://debianfai.fi.uncoma.edu.ar/",
         },
         {
           title: "CEFAI app",
@@ -160,7 +160,7 @@ export default {
             <p>Otra de las funcionalidades es la de consultar las correlativas para poder saber el régimen de correlatividades sin tener que leer una tabla. Una de las cosas que queremos agregar es la capacidad de contar con cursos de programación para los estudiantes de la carrera. </p>
           `,
           link:
-            "https://github.com/francoZuniga32/francozuniga32.github.io/tree/master/docs",
+            "https://github.com/francoZuniga32/CEFAIrest",
         },
       ],
       demos: [
@@ -172,7 +172,7 @@ export default {
           text: `
             <p>Podrá realizar las acciones básicas y necesarias para poder realizar una compra. Podrá seleccionar un producto, la cantidad y cargarlas a un carrito de compras. Tengo que trabajar en el sistema de paginación y además en los filtros de búsqueda.</p>
           `,
-          link: "http://cookingbeats.ar/",
+          link: "https://github.com/francoZuniga32/ecomerce-demo",
         },
         {
           title: "Producto Flow",
@@ -182,7 +182,7 @@ export default {
           text: `
             <p>Son innumerables las empresas que requieren un sistema de seguimiento de su produccion, he aquí una demo de como funcionaria una en la vida real. Podrá ingresar un pedido, luego de esto tendrá que completar los formularios para los procesos de dicho producto y podrá ver por qué etapa están dichos productos. Luego de finalizar podrá realizar la entrega de dicho pedido. Además de esto podrá ver algunas métricas como por ejemplo en qué etapa está se encuentra un pedido.</p>
           `,
-          link: "http://cookingbeats.ar/",
+          link: "https://github.com/francoZuniga32/product-flow",
         },
       ],
     };
