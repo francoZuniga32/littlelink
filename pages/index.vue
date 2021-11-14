@@ -21,13 +21,13 @@
     </b-row>
     <hr />
     <b-row>
-      <b-col>
+      <b-col sm>
         <h2>Tecnologuias:</h2>
         <ol>
           <li v-for="(tec, i) in tecnologuias" :key="i">{{ tec }}</li>
         </ol>
       </b-col>
-      <b-col style="height: 300px; overflow-x: scroll;">
+      <b-col style="height: 300px; overflow-x: scroll;" sm>
         <h2>Experiencia:</h2>
         <ul class="timeline">
           <li v-for="(trabajo, i) in experiencia" :key="i">
@@ -40,7 +40,7 @@
           </li>
         </ul>
       </b-col>
-      <b-col>
+      <b-col sm>
         <h2>Logros:</h2>
       </b-col>
     </b-row>
