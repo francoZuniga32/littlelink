@@ -1,254 +1,132 @@
 <template>
-  <b-container>
-    <b-row
-      class="d-flex justify-content-center align-items-center"
-      style="margin: 10% 0%"
-    >
-      <b-col sm>
-        <h1 class="text-left">
-          <b>Franco Zuñiga, Desarrollador Web</b>
-        </h1>
-      </b-col>
-      <b-col sm>
+  <b-container class="conteiner">
+    <section class="header">
+      <article class="foto">
+        <img src="/perfil.jpg" class="img" alt="">
+      </article>
+      <article>
+        <h2>Franco Agustin Ojeda Zuñiga</h2>
+        <button>Contatame <i class="material-icons">expand_more</i>
+        </button>
+      </article>
+    </section>
+    <section>
+      <article>
         <p>
-          Soy franco zuñiga soy estudiante de Ciencias de la Computación y Administración de Sistemas.
-           Programo web desde hace 4 años, ademas cuento con experiencia programando software para  empresas.
+          Estudio en la Licenciatura en Ciencias de la Computación, y Tec. Administración en Sistemas y Software Libre. Soy programador web desde hace 4 años, Cofundador de Cooking Beats. Aprendo tecnologías nuevas de forma autodidacta.
         </p>
-        <p>
-          Creo que tengo lo suficiente como para poder ayudarte con tus proyectos espero que puedas contar conmigo.
-        </p>
-      </b-col>
-    </b-row>
-    <hr />
-    <b-row>
-      <b-col sm>
-        <h2>Tecnologuias:</h2>
-        <ol>
-          <li v-for="(tec, i) in tecnologuias" :key="i">{{ tec }}</li>
-        </ol>
-      </b-col>
-      <b-col style="height: 300px; overflow-x: scroll;" sm>
-        <h2>Experiencia:</h2>
-        <ul class="timeline">
-          <li v-for="(trabajo, i) in experiencia" :key="i">
-            <h5>{{ trabajo.titulo}}</h5>
-            <h6>{{ trabajo.area }}. {{ trabajo.puesto }}</h6>
-            <hr>
-            <p>
-              {{ trabajo.descripcion }}
-            </p>
-          </li>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h4>Habilidades</h4>
+        <ul>
+          <li>Programación web Básica: html, css, js básico (DOM, acceso a atributos, etc).</li>
+          <li>Programación web backend: php, nodejs, mysql.</li>
+          <li>Frameworks: Vuejs, Nuxt js, Express js.</li>
+          <li>Herramientas: Sequelize (ORM), JWT (json web token), Docker, Bash, Administración básica de linux.</li>
+          <li>Idioma: Inglés técnico.</li>
         </ul>
-      </b-col>
-      <b-col sm>
-        <h2>Logros:</h2>
-      </b-col>
-    </b-row>
-    <hr />
-    <b-row>
-      <b-col>
-        <h2>Proyectos</h2>
-        <b-row class="row row-cols-1 row-cols-md-4">
-          <proyecto
-            v-for="(data, i) in proyectos"
-            :key="i"
-            :id="i"
-            :title="data.title"
-            :img="data.img"
-            :link="data.link"
-            :presentation="data.presentation"
-            :text="data.text"
-          ></proyecto>
-        </b-row>
-      </b-col>
-    </b-row>
-    <hr />
-    <b-row>
-      <b-col>
-        <h2>Demos</h2>
-        <b-row class="row row-cols-1 row-cols-md-4">
-          <proyecto
-            v-for="(data, i) in demos"
-            :key="i"
-            :id="`demo-${i}`"
-            :title="data.title"
-            :img="data.img"
-            :link="data.link"
-            :presentation="data.presentation"
-            :text="data.text"
-          ></proyecto>
-        </b-row>
-      </b-col>
-    </b-row>
+      </article>
+    </section>
+    <section>
+      <h4>Experiencia</h4>
+      <div>
+        <h5>Desarrollador web, En Tree soft. marzo 2021 - julio 2021</h5>
+        <p>Desarrolle el perfil de desarrollador web, dando soporte y mantenimiento a una plataforma para una empresa de mantenimiento industrial (revestimiento de caños, tubing). Me encargue de la documentación del sistema y de su migración a tecnologías más modernas como express js y vue js. Por problemas de coordinación y tiempo no puede lograr dicha misión.</p>
+      </div>
+      <div>
+        <h5>Pasante en la Policía de la Provincia del Neuquén, Dpto. Informática. septiembre 2016 - Octubre 2016.</h5>
+        <p>
+          Realice tareas afines con el área de programación de dicha entidad, aprendiendo lo básico de la programación web y realizando algunas tareas sencillas para dicho ente. 
+        </p>
+      </div>
+      <div>
+        <h5>Tallerista en Vocaciones Tic, septiembre 2018 - junio 2019.</h5>
+        <p>Dentro del programa de Vocaciones TIC de la fundación sadosky, impartí talleres de programación en escuelas secundarias, y una capacitación de ATEN neuquén en Andacollo.</p>
+      </div>
+    </section>
+    <section>
+      <article>
+        <h4>Proyectos</h4>
+        <div>
+          <h6>Cefai REST</h6>
+          <p>API rest de materias y correlatividades de las carreras de la Facultad de Informatica, Universidad del Comahue. Construida en nodejs con express y conectada a una base de datos con un Sequelize ORM.</p>
+        </div>
+        <div>
+          <h6>SaaS implementacin</h6>
+          <p>Estoy integrando 2 apis una construida en nodejs con express y otra en python para controlar contenedores docker, y poder manejar una serie de aplicaciones.</p>
+        </div>
+        <div>
+          <h6></h6>
+          <p></p>
+        </div>
+        <div>
+          <h6></h6>
+          <p></p>
+        </div>
+        <div>
+          <h6></h6>
+          <p></p>
+        </div>
+      </article>
+    </section>
+    <section>
+      <article class="form">
+        <form action="">
+          <label for="">Email</label>
+          <input type="email" name="email">
+          <label for="">Asunto</label>
+          <input type="text" name="asunto">
+          <label for="">Mensaje</label>
+          <textarea name="mensaje" id="" cols="30" rows="10"></textarea>
+          </form>
+      </article>
+    </section>
   </b-container>
 </template>
-
-<script>
-import proyecto from "../components/Proyecto.vue";
-import videoCard from "../components/Video.vue";
-export default {
-  components: {
-    proyecto,
-    videoCard,
-  },
-  data() {
-    return {
-      tecnologuias: [
-        "HTML",
-        "CSS-Basico",
-        "JS",
-        "PHP",
-        "MySQL",
-        "Node JS",
-        "Sequelise ORM",
-        "Linux / Bash",
-      ],
-      experiencia:[
-        {
-          titulo: "Policia de la Provincia del Neuquen",
-          puesto: "Pasante",
-          area: "Dpto de informática, Area de programacion",
-          descripcion: "Realizar tareas de capacitación en el funcionamiento del dpto de informática de dicho ente, centrándome en el area de programacion, aprendiendo los pasos y formas en la que se desarrolla un software."
-        },
-        {
-          titulo: "Pasantías en la Facultad de Informática",
-          puesto: "Pasante",
-          area: "Universidad del Comahue, Facultad de Informática",
-          descripcion:"Realice pasantías realizando labores educativas. Participe como tallerista del programa de Vocaciones TIC, participe como ayudante en Vocaciones TIC itinerante, realizando actividades en Loncopué y Chos Malal. Además de participar de varias actividades de la facultad."
-        },
-        {
-          titulo: "Programador en Tree Soft",
-          puesto: "Desarrollador web",
-          area: "Programacion",
-          descripcion:"migre el backend de una aplicación construida en PHP a nodejs con Express y Sequelize, lo que resultó en una api rest. Además de desarrollar una aplicación en Vuejs Cli para consumir dicha api."
-        },
-        {
-          titulo: "Programador principal de Cooking Beats",
-          puesto: "Programador Principal",
-          area: "Programacion",
-          descripcion:"Cooking beats es un marketplace comunidad para productores de audio y beatmakers. Soy cofundador además de programador principal. Finalistas de nave federal 2021."
-        },
-      ],
-      proyectos: [
-        {
-          title: "Cooking Beats",
-          img: "miniaturas/cookingbeats.png",
-          presentation:
-            "Marketplace comunidad de beatmakers y productores de audio. Finalista de naves federal (banco macro)",
-          text: `
-            <p>Creamos Cooking Beats con el objetivo de ayudar a la comunidad de beatmaker y productor a poder comercializar su música por medio de una plataforma que asegure que ambas partes sean beneficiadas. El sistema está construido en tecnologías modernas por lo que siempre estamos avanzando a nuevos entornos.</p>
-          `,
-          link: "https://cookingbeats.github.io/",
-        },
-        {
-          title: "Debian FAI",
-          img: "miniaturas/debianfai.png",
-          presentation:
-            "página web de la distribución de Debian de la facultad de informática",
-          text: `
-            <p>Está construida en html, js y css puro además de que uso bootstrap para el grid y lo demás. Contiene lo necesario para saber instalarlo además de los archivos de la distro.</p>
-          `,
-          link:
-            "http://debianfai.fi.uncoma.edu.ar/",
-        },
-        {
-          title: "CEFAI app",
-          img: "miniaturas/img.png",
-          presentation: "Aplicación de horarios y consulta de correlatividades",
-          text: `
-            <p>Esta aplicación de momento está fuera de línea ya que estamos en proceso de migrar a un ORM. El sitio ofrece un sistema de horarios para mostrar qué materias se están dictando además del aula en donde se cursa.</p>
-            <p>Otra de las funcionalidades es la de consultar las correlativas para poder saber el régimen de correlatividades sin tener que leer una tabla. Una de las cosas que queremos agregar es la capacidad de contar con cursos de programación para los estudiantes de la carrera. </p>
-          `,
-          link:
-            "https://github.com/francoZuniga32/CEFAIrest",
-        },
-      ],
-      demos: [
-        {
-          title: "Ecomerce",
-          img: "miniaturas/ecommerce.png",
-          presentation:
-            "Demostración de cómo funciona un ecommerce de forma sencilla",
-          text: `
-            <p>Podrá realizar las acciones básicas y necesarias para poder realizar una compra. Podrá seleccionar un producto, la cantidad y cargarlas a un carrito de compras. Tengo que trabajar en el sistema de paginación y además en los filtros de búsqueda.</p>
-          `,
-          link: "https://github.com/francoZuniga32/ecomerce-demo",
-        },
-        {
-          title: "Producto Flow",
-          img: "miniaturas/img.png",
-          presentation:
-            "Aplicación de control de produccion.",
-          text: `
-            <p>Son innumerables las empresas que requieren un sistema de seguimiento de su produccion, he aquí una demo de como funcionaria una en la vida real. Podrá ingresar un pedido, luego de esto tendrá que completar los formularios para los procesos de dicho producto y podrá ver por qué etapa están dichos productos. Luego de finalizar podrá realizar la entrega de dicho pedido. Además de esto podrá ver algunas métricas como por ejemplo en qué etapa está se encuentra un pedido.</p>
-          `,
-          link: "https://github.com/francoZuniga32/product-flow",
-        },
-      ],
-    };
-  },
-};
-</script>
 <style>
-.nav-fill .nav-item .nav-link {
+.header{
+  display: flex;
+  flex-direction: row;
+}
+
+.header article{
+  height: 400px;
+  max-width: 50%;
+  min-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+article{
+  display: flex;
+  flex-direction: column;
+}
+
+article button{
+  height: 40px;
+  border: none;
+  background-color: rgb(87, 189, 237);
   color: white;
-}
-
-.nav-tabs .nav-link {
-}
-
-.nav-tabs .nav-link.active {
-  color: white;
-  background-color: #4f3b78;
-  border-color: #363b4e;
-}
-
-.tab-content {
-  background-color: #363b4e;
   border-radius: 10px;
-  padding: 1%;
+  text-align: center;
 }
 
-ol {
-  list-style-type: none;
-  counter-reset: li;
+article button:active{
+  background-color: rgb(78, 166, 208);
 }
 
-li:before {
-  counter-increment: li;
-  content: counter(li, decimal-leading-zero);
-  color: #6a7ff5;
-  margin-right: 0.25em;
+.header .img{
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
 }
 
-ul.timeline {
-    list-style-type: none;
-    position: relative;
-}
-ul.timeline:before {
-    content: ' ';
-    background: black;
-    display: inline-block;
-    position: absolute;
-    left: 29px;
-    width: 2px;
-    height: 100%;
-    z-index: 400;
-}
-ul.timeline > li {
-    margin: 20px 0;
-    padding-left: 20px;
-}
-ul.timeline > li:before {
-    content: ' ';
-    background: white;
-    display: inline-block;
-    position: absolute;
-    border-radius: 50%;
-    border: 3px solid black;
-    left: 20px;
-    width: 20px;
-    height: 20px;
-    z-index: 400;
+.form form{
+  flex-direction: column;
 }
 </style>
+<script>
+</script>
