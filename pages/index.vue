@@ -43,7 +43,7 @@
 			<div class="proyecto" v-for="(p, i) in proyectos" :key="i">
 				<h6>{{ p.titulo }}</h6>
 				<p>{{ p.descripcion }}</p> 
-				<div>
+				<div class="referencias">
 					<a v-for="(im, i) in p.links" v-bind:href="im.link">
 						<img v-bind:src="im.img" width="50px"/>
 					</a>
@@ -189,8 +189,12 @@ ul li{
 	justify-content: center;
 	align-content: center;
 }
+
 .trabajos{
-	margin-top: 10%
+	 height: 100%;
+  width: 100%;
+  top: 10%;
+  right: 5%;
 }
 
 .trabajos div{
@@ -222,19 +226,15 @@ ul li{
 .proyectos .proyecto{
 	padding: 1%;
 	width: 300px;
-	border-right: 2px solid #c4c4c4;
 	margin: 10px;
-	transition: border linear 1s;
 }
 
-.proyecto:hover {
-	box-shadow: 0px 0px 10px #c4c4c4;
-}
-
-.proyecto div{
-	display:flex;
+.proyecto .referencias{
+	width: 100%;
+	display: flex;
 	flex-direction: row;
-	flex-wrap: 10%;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 
