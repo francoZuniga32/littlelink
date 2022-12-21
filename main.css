@@ -17,13 +17,6 @@ a:hover{
     border-bottom: 1px solid #C4C4C4;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    min-height: 95vh;
-    height: auto;
-}
 
 .info {
     width: 50%;
