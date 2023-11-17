@@ -13,30 +13,68 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			<h1> 🤚 Hola, Dev!</h1>
+			<h1 style="text-align: center;"> 🤚 Hola, Dev!</h1>
 			<p>
-				Biemvenido a mi blog de desarrollo, aqui podras encontrar muchas de mis experiencias trabajando como desarrollador. Podras ver como he resuelto
-				algunos problemas en mi trabajo o en mis estudios, ademas de otros topicos del mundo del desarrollo.
+				Bienvenido a mi CV y Blog de desarrollo, aqui podras encontrar muchas de mis experiencias trabajando como desarrollador. 
+				Podras ver como he resuelto algunos problemas en mi trabajo o en mis estudios, ademas de otros topicos del mundo del desarrollo.
 			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
+			<h2>Habilidades</h2>
+			<section>
+				<ul>
+					<li><b>Programación web Básica:</b> html, css, js básico (DOM, acceso a atributos, etc).</li>
+					<li><b>Programación web backend:</b> php, nodejs, mysql, mongodb(básico), C#.</li>
+					<li><b>Metodologías Ágiles:</b> Scrum (trello, jira) e integración con slack para seguimiento de tareas. </li>
+					<li><b>Frameworks:</b> Vuejs, Nuxt js, Express js, Yii2, .NET.</li>
+					<li><b>Base de datos:</b> MySQL, MariaDB, SQLServer.</li>
+					<li><b>Herramientas de Software:</b> Sequelize (ORM), JWT (json web token), Docker, Bash, Administración básica de linux, MS SQL Server.</li>
+					<li><b>Idioma:</b> Inglés técnico.</li>
+				</ul>
+			</section>
+			<h2>Mi Experiencia Laboral</h2>
+			<p>
+				<ul>
+					<li>
+						<h4>Desarrollador Asp .Net, Eximo Software</h4>
+						<h5>Neuquen Capital, Oct 2022 - Actualmente</h5>
+						<p>Trabajo dando mantenimiento a aplicaciones en .net 4.8, desarrollo apis rest en .net 6 para varios clientes.
+							Ademas de que damos mantenimento a aplicaciones en PHP y estamos incurcionando en el mundo de los contenedores
+							para el ambiente de desarrollo.
+						</p>
+					</li>
+					<li>
+						<h4>Desarrolldor php, nodejs y vue js, Tree soft</h4>
+						<h5>Neuquen Capital, Mar 2021 - Jul 2021</h5>
+						<p>Realize el relevamiento y desarollo de varias funcionalidades de una aplicacion en php vanilla, migramos parte del 
+							desarrollo a nodejs (expressjs, sequelize ORM) y vuejs.
+						</p>
+					</li>
+					<li>
+						<h4>Pasante en la Policía de la Provincia del Neuquén</h4>
+						<h5>Neuquen Capital, Sep 2016 - Oct 2016</h5>
+						<p>Realice tareas afines con el área de programación de dicha entidad, aprendiendo lo básico de la programación web y realizando algunas tareas sencillas para dicho ente.</p>
+					</li>
+				</ul>
+			</p>
+			<h2>Estudios</h2>
 			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
+				<li>
+					<h4>Licenciatura en Ciencias de la Computación. 2017 - Actualidad.</h4>
+					<p>Me encuentro cursando el segundo año de la carrera. Promedio actual de 7.</p>
+				</li>
+				<li>
+					<h4>Tecnicatura en Administración de Sistemas y Software Libre. 2019 - Actualidad.</h4>
+					<p>Actualmente cursando el segundo año de la carrera. Promedio de 8.</p>
+				</li>
+				<li>
+					<h4>Bachillerato en Ciencias Humanas y Naturales, CPEM 26. 2013 - 2016</h4>
+					<p>	Estudios secundarios finalizados con promedio de 8. </p>
+				</li>
 			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<div style="display: flex; justify-content: center;">
+				<a class="btn" style="border: red;">
+					cv
+				</a>
+			</div>
 		</main>
 		<Footer />
 	</body>
