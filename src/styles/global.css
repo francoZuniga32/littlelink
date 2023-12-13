@@ -155,14 +155,22 @@ hr {
 	white-space: nowrap;
 }
 
-.btn{
+.btn-prymary{
 	text-align: center;
 	vertical-align: middle;
-	min-width: 200px;
-	min-height: 80px;
-	background-color: rgb(var(--gray-dark));
+	min-width: 150px;
+	min-height: 50px;
+	background-color: rgb(214, 42, 42);
 	border-radius: 10px;
 	color: rgb(var(--gray-light));
-	font-family: 'Courier New', Courier, monospace;
 	font-size: x-large;
+	text-decoration: none;
+}
+
+.btn-prymary:hover{
+	text-decoration: none;
+	color: rgb(var(--gray-light));
+	-webkit-box-shadow: 0px 10px 31px -4px rgba(224,76,76,1);
+-moz-box-shadow: 0px 10px 31px -4px rgba(224,76,76,1);
+box-shadow: 0px 10px 31px -4px rgba(224,76,76,1);
 }
