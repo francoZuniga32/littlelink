@@ -8,51 +8,53 @@ tags: []
 
 ## "Es una pavada"
 
-Siempre que una solicitud de un cambio encierre estas palabras podemos encontrarnos en problemas, pero... ¿por que?.
-Por que no siempre lo que se pide es lo que se espera y este es la raiz de muchos problmas y conflictos en el equipo de desarrollo. Contar con una Especificacin de Requermientos de Software es lo ideal pero no siempre podemos contar con uno ya que muchos de los cambios futuros setan por tareas de mantenimiento.
+Siempre que una solicitud de un cambio encierra estas palabras podemos encontrarnos en problemas, pero... ¿por qué?.
+Porque no siempre lo que se pide es lo que se espera y esto es la raíz de muchos problemas y conflictos en el equipo de desarrollo. Contar con una Especificación de Requerimientos de Software es lo ideal pero no siempre podemos contar con uno ya que muchos de los cambios futuros serán por tareas de mantenimiento.
 
-Las aplicaciones se tienen que adaptar a las necesidades del negocio y esto implica que en un futuro la aplicacion tenga que cambiar (voy a preparar un articulo sobre destinar tiempo a limpiar codigo). Es cuando pasan estas cosas como por ejemplo tenemos que cambiar una funcionalidad o agregar cosas nuevas.
+Las aplicaciones se tienen que adaptar a las necesidades del negocio y esto implica que en un futuro la aplicación tenga que cambiar (voy a preparar un artículo sobre destinar tiempo a limpiar código). Es cuando pasan estas cosas como por ejemplo tenemos que cambiar una funcionalidad o agregar cosas nuevas.
 
-Llegados a este punto lo que se puede hacer es contar con algun sistema de gestion de tareas como puede ser jira y agregar una historia que contenga un cuerpo como el siguiente:
+Llegados a este punto lo que se puede hacer es contar con algún sistema de gestión de tareas como puede ser jira y agregar una historia que contenga un cuerpo como el siguiente:
 
 ``` text
-CLIENTE - MODIFICACION
+CLIENTE - MODIFICACIÓN
 ---
-necesitamos implementar un cambio en esta aplicacion por que el cliente lo quiere
+necesitamos implementar un cambio en esta aplicación por que el cliente lo quiere
 😄, espero que no te resulte muy complicado...
-descripcion detallada de lo que se quiere hacer ...
-descripcion de que datos usar de la base de datos o como plantear el diseño ...
-detalles de que es lo que se espera que realice la aplicacion ...
+descripción detallada de lo que se quiere hacer ...
+descripción de qué datos usar de la base de datos o cómo plantear el diseño ...
+detalles de qué es lo que se espera que realice la aplicación ...
 
 Saludos el PM.
 ```
 
-luego se le asigna la tarea a el usuario y puede que por medio de slack se genere un notificacion.
+luego se le asigna la tarea a el usuario y puede que por medio de slack se genere un notificación.
 
-Tambien podria ser una notificacion de algun error o bug:
+Tambien podria ser una notificacion de algún error o bug:
 ```text
 CLIENTE - BUG
 ---
 el cliente nos informa del siguiente bug:
-descripcion de donde se encuentra el bug ...
-descripcion de como replicar el bug ...
-descripcion del usuario que esta usando la aplicacion (permisos con los que cuenta, nivel de acceso, etc´).
+descripción de donde se encuentra el bug ...
+descripción de cómo replicar el bug ...
+Descripción del usuario que está usando la aplicación (permisos con los que cuenta, nivel de acceso, etc ́).
 
-saludos el PM.
+Saludos el PM.
 ```
 
-De esta menera el programador puede tener mas detalles de que es lo que se tiene que realizar y no queda en un mensaje de whatsapp o gmail.
+De esta manera el programador puede tener más detalles de qué es lo que se tiene que realizar y no queda en un mensaje de whatsapp o gmail.
 
-En caso de que su equipo no tenga un gestor de proyectos puede enviar un email con este formato y usar el mismo titulo y asunto para poder filtrarlo luego.
+En caso de que su equipo no tenga un gestor de proyectos puede enviar un email con este formato y usar el mismo título y asunto para poder filtrar luego.
 
 ```text
 Titulo: CLIENTE - BUG / MODIFICACION - DESCRIPCION
-Asunto: Modificacion / Bug - descripcion un poco mas detallada.
+Asunto: Modificación / Bug - descripción un poco más detallada.
 Body: mensaje detallando lo que se requiere.
 ```
 
-Esto tambien funciona para cuando venga la visita del auditor ayuda a tener pruebas de que se realizan "mantenimiento" a los clientes.
+Esto también funciona para cuando venga la visita del auditor ayuda a tener pruebas de que se realizan "mantenimiento" a los clientes.
 
-Esto no quita que se realizen ERS propias para proyectos ya que son la base para cerrar contratos con los clientes.
+Esto no quita que se realicen ERS propias para proyectos ya que son la base para cerrar contratos con los clientes.
 
 Sin nada mas Saludos.
+
+
