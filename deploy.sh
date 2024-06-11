@@ -12,6 +12,8 @@ mv dist/ docs/
 
 echo "subimos el codigo ..." 
 
+fecha_actual=$(date +"%Y-%m-%d")
+
 git add .
-git commit -m "feat: se compilo y subio el proyecto / %Y-%m-%d %H:%M:%S"
+git commit -m "feat: se compilo y subio el proyecto / $fecha_actual"
 git push
