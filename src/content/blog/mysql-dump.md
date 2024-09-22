@@ -2,7 +2,7 @@
 title: 'Mysql Dump'
 description: 'Como hacer buckups de bases de datos mysql'
 pubDate: '2024-09-22'
-heroImage: '/blog-placeholder-1.jpg'
+heroImage: '/blog-placeholder-2.jpg'
 tags: ['mysql', 'bash']
 ---
 
