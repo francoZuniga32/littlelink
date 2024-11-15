@@ -1,0 +1,110 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin=""
+        />
+        <script
+            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""
+            is:inline></script>
+        <style>
+            #map {
+                height: 480px;
+            }
+        </style>
+    </head>
+    <body>
+        <Header title={SITE_TITLE} />
+        <main>
+            <h1 class="text-center text-5xl">🌎 Mis Recorridos de Traking 🗺️</h1>
+            <br>
+            <div id="map"></div>
+            <ul>
+                <li
+                    onclick="seleccionarCamino( { lat: -40.857384517354674, lng: -71.61443620920183 })"
+                >
+                    <b>Huella Andina: Tramo 7: </b>
+                    <p>VILLA TRAFUL - CERRO BAYO - Etapa 23: Bosque Arrayanes - Angostura</p> 
+                </li>
+                <li
+                    onclick="seleccionarCamino( { lat: -41.283481516879256,lng: -71.51681721210481})"
+                >
+                    <b>Sendero Laguna Llum - mirador isla corazon: </b>
+                    <p>Tramo que hicimos en familia</p> 
+                   <div class="flex">
+                    <img class="w-1/2 m-1" src="traking/Llum/IMG_20240204_124222.jpg" alt="" srcset="">
+                    <img class="w-1/2 m-1" src="traking/Llum/IMG_20240204_124731.jpg" alt="" srcset="">
+
+                   </div>
+                </li>
+            </ul>
+        </main>
+        <script is:inline>
+            
+
+            var map = L.map("map").setView([-41.136779, -71.353455], 9);
+
+            L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                maxZoom: 19,
+                attribution:
+                    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+            }).addTo(map);
+
+
+            /*let camino = [];
+            function onMapClick(e) {
+                L.marker(e.latlng).addTo(map);
+                camino.push(e.latlng);
+            }
+
+            map.on("click", onMapClick);
+            */
+
+            function seleccionarCamino(latlng) {
+                map.setView(latlng, 13);
+            }
+
+            obtenerCamino(439425725)
+
+            function obtenerCamino(idCamino){
+                const wayId = "12345678"; // Reemplaza con el ID real del camino
+                const overpassUrl = "/caminos.json";
+
+                fetch(overpassUrl, {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "text/plain"
+                    }
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Error: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    data.caminos.forEach(camino => {
+                        L.polyline(camino).addTo(map);
+                    });
+                })
+                .catch(error => {
+                    console.error("Error en la consulta:", error);
+                });
+
+            }
+        </script>
+    </body>
+</html>
