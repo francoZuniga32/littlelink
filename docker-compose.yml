@@ -5,7 +5,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./dist:/usr/share/nginx/html:ro
+      - ./docs:/usr/share/nginx/html:ro
     networks:
       - nginx_network
 
