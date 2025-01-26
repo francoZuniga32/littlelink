@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Flow from '../components/Flow';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -13,13 +14,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			<h1 style="text-align: center;"> 🤚 Hola, Dev!</h1>
+			<h1 style="text-align: center;" class="pb-3 pt-3"> 🤚 Hola, Dev!</h1>
 			<p>
 				Bienvenido a mi CV y Blog de desarrollo, aqui podras encontrar muchas de mis experiencias trabajando como desarrollador. 
 				Podras ver como he resuelto algunos problemas en mi trabajo o en mis estudios, ademas de otros topicos del mundo del desarrollo.
 			</p>
 			<h2>Habilidades</h2>
-			<section>
+			<section class="border-l-slate-600 border-l-2 pl-3">
 				<ul>
 					<li><b>Programación web Básica:</b> html, css, js básico (DOM, acceso a atributos, etc).</li>
 					<li><b>Programación web backend:</b> php, nodejs, mysql, mongodb(básico), C#.</li>
@@ -30,9 +31,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					<li><b>Idiomas:</b> Inglés técnico.</li>
 				</ul>
 			</section>
-			<h2>Mi Experiencia Laboral</h2>
-			<p>
-				<ul>
+			<h2>Experiencia Laboral</h2>
+			<ul class="border-l-slate-600 border-l-2 pl-3">
 					<li>
 						<h4>Desarrollador Asp .Net, Eximo Software</h4>
 						<h5>Neuquen Capital, Oct 2022 - Actualmente</h5>
@@ -41,42 +41,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 							para el ambiente de desarrollo. Actualmente me encuentro desarrollando una aplicacion moil en .net maui.
 						</p>
 					</li>
-					<li>
+					<li >
 						<h4>Desarrolldor php, nodejs y vue js, Tree soft</h4>
 						<h5>Neuquen Capital, Mar 2021 - Jul 2021</h5>
 						<p>Realize el relevamiento y desarollo de varias funcionalidades de una aplicacion en php vanilla, migramos parte del 
 							desarrollo a nodejs (expressjs, sequelize ORM) y vuejs.
 						</p>
 					</li>
-					<li>
-						<h2>Habilidades</h2>
-			<section>
-				<ul>
-					<li><b>Programación web Básica:</b> html, css, js básico (DOM, acceso a atributos, etc).</li>
-					<li><b>Programación web backend:</b> php, nodejs, mysql, mongodb(básico), C#.</li>
-					<li><b>Metodologías Ágiles:</b> Scrum (trello, jira) e integración con slack para seguimiento de tareas. </li>
-					<li><b>Frameworks:</b> Vuejs, Nuxt js, Express js, Yii2, .NET</li>
-					<li><b>Base de datos:</b> MySQL, MariaDB, SQLServer.</li>
-					<li><b>Herramientas de Software:</b> Sequelize (ORM), JWT (json web token), Docker, Bash, Administración básica de linux, MS SQL Server.</li>
-					<li><b>Idiomas:</b> Inglés técnico.</li>
-				</ul>
-			</section>
-			<h2>Mi Experiencia Laboral</h2>
-			<p>
-				<ul>
-					<li>
-						<h4>Desarrollador Asp .Net, Eximo Software</h4>
-						<h5>Neuquen Capital, Oct 2022 - Actualmente</h5>
-						<p>Trabajo dando mantenimiento a aplicaciones en .net 4.8, desarrollo apis rest en .net 6 para varios clientes.
-							Ademas de que damos mantenimento a aplicaciones en PHP y estamos incurcionando en el mundo de los contenedores
-						<h4>Pasante en la Policía de la Provincia del Neuquén</h4>
-						<h5>Neuquen Capital, Sep 2016 - Oct 2016</h5>
-						<p>Realice tareas afines con el área de programación de dicha entidad, aprendiendo lo básico de la programación web y realizando algunas tareas sencillas para dicho ente.</p>
-					</li>
-				</ul>
-			</p>
+			</ul>
+			
 			<h2>Estudios</h2>
-			<ul>
+			<ul class="border-l-slate-600 border-l-2 pl-3">
 				<li>
 					<h4>Licenciatura en Ciencias de la Computación. 2017 - Actualidad.</h4>
 					<p>Me encuentro cursando el segundo año de la carrera. Promedio actual de 7.</p>
@@ -96,6 +71,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					cv
 				</a>
 			</div>
+			<Flow client:load ></Flow>
 		</main>
 		<Footer />	
 	</body>
