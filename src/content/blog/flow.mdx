@@ -1,0 +1,108 @@
+---
+title: 'React Flow en Astro'
+description: 'Por que especificar cambios pequeños'
+pubDate: '2025-01-26'
+heroImage: '/blog-placeholder-3.jpg'
+tags: []
+
+---
+import Flow from '../../components/Flow';
+
+## Instalacion y configuracion de react, mdx y react flow
+
+```bash
+npm install @astrojs/react
+npm install @astrojs/mdx
+npm install @xyflow/react
+```
+
+## Configuracion 
+
+configuramos el archivo `astro.config.mjs`.
+```js
+import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
+import sitemap from '@astrojs/sitemap';
+import react from '@astrojs/react';
+import tailwind from "@astrojs/tailwind";
+
+// https://astro.build/config
+export default defineConfig({
+  site: 'https://example.com',
+  integrations: [mdx(), sitemap(), tailwind(), react()],
+});
+
+```
+## Ahora vamos a crear un componente con react flow 
+En `src/components/` creamos el componente `Flow.tsx`
+
+```js
+import React from 'react';
+import { ReactFlow , MiniMap,
+    Controls,
+    Background} from '@xyflow/react';
+import '@xyflow/react/dist/style.css';
+
+
+import CustomNode from './Flow/CustomNode';
+
+const nodeTypes = { CustomNode: CustomNode };
+
+export default function App() {
+  const initialNodes = [
+    { id: '1', position: { x: 0, y: 0 }, data: { label: '22' } , type:'CustomNode'},
+    { id: '2', position: { x: 0, y: 100 }, data: { label: '222' } },
+  ];
+  const initialEdges = [{ id: 'e1-2', source: '1', target: '2' }];
+   
+  return (
+    <div style={{ width: '100%', height: '500px', backgroundColor: "white", color: "gray" }}>
+      <ReactFlow nodes={initialNodes} edges={initialEdges} nodeTypes={nodeTypes} >
+      <Controls />
+        <MiniMap />
+        <Background variant="dots" gap={12} size={1} />
+      </ReactFlow>
+    </div>
+  );
+}
+```
+
+## Renderizado en una pagina
+
+en `index.astro` u otra pagina importamos y llamamos a nuestro componente
+
+```js
+---
+import Flow from '../components/Flow';
+---
+
+<Flow client:load></Flow>
+```
+es muy importante el `client:load` para que astro renderice el componente en el lado del cliente.
+
+## Renderiando el componente en un .mdx
+
+Si queremos armar un diagrama en un .md para eso necesitamos cambiar la extencion a un mdx para poder incluir componentes y etiquetas html en nuestro codigo markdown.
+
+en `src/content/blog` creamos un archivo `flow.mdx` donde importamos nuestro componente y lo renderizamos
+
+```md
+---
+title: 'React Flow en Astro'
+description: 'Por que especificar cambios pequeños'
+pubDate: '2025-01-26'
+heroImage: '/blog-placeholder-3.jpg'
+tags: []
+---
+
+import Flow from '../../components/Flow';
+
+<Flow client:load></Flow>
+
+```
+
+ahora podemos ir armando nuestros diferentes diagramas e irlos incluyendo en nuestra pagina de astro.
+
+## Ejemplo
+
+<Flow client:load></Flow>
