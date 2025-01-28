@@ -14,10 +14,8 @@ mv docs/_astro/ docs/astro/
 
 # cambiamos /_astro/ por /astro/
 
-#!/bin/bash
-
 # Configura la carpeta donde están los archivos .html
-FOLDER_PATH="docs/"
+FOLDER_PATH="docs"
 
 # Cadena que deseas buscar
 SEARCH_STRING="/_astro/"
