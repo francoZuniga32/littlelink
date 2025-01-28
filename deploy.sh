@@ -27,7 +27,7 @@ REPLACE_STRING="/astro/"
 for file in "$FOLDER_PATH"/*.html; do
     if [[ -f "$file" ]]; then
         # Usar sed para reemplazar en cada archivo
-        sed -i "s/${SEARCH_STRING}/${REPLACE_STRING}/g" "$file"
+        sed "s|${SEARCH_STRING}|${REPLACE_STRING}|g" "$file"
         echo "Procesado: $file"
     else
         echo "No se encontró ningún archivo .html en la carpeta."
