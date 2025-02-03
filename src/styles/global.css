@@ -46,7 +46,7 @@ body {
 	line-height: 1.7;
 }
 main {
-	width: 920px;
+	max-width: 920px;
 	margin: auto;
 	padding: 3em 1em;
 }
@@ -131,8 +131,39 @@ hr {
 	body {
 		font-size: 18px;
 	}
+
 	main {
-		padding: 1em;
+		width: 100% !important;
+		margin: 1%;
+		padding: 0;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+	h3 {
+		font-size: 1em;
+	}
+	h4 {
+		font-size: 0.5em;
+	}
+	h5 {
+		font-size: 0.25em;
+	}
+	nav{
+		display: flex;
+		flex-direction: column;
+	}
+	.internal-links{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.internal-links a{
+		text-align: center;
 	}
 }
 
